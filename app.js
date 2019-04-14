@@ -4,8 +4,10 @@ var WebSocket=require('ws');
 
 const app=express();
 const server=http.createServer(app);
-console.log(server);
-
+server.listen(3000);
+var ws=new WebSocket.Server({server});
+ws.on("request",function(req){console.log(req);})
+ws.on("open",function(req){ws.send("ee");})
 /*
 var chat=function(){
     this.list=[];// USER LIST OF PEOPLE IN ROOM

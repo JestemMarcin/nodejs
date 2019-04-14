@@ -1,0 +1,18 @@
+    <script>
+    
+    
+    var exampleSocket = new WebSocket("ws://127.0.0.1:3000");
+    exampleSocket.onopen=function(){
+        console.log("aa");
+        exampleSocket.send("aa");};
+    exampleSocket.onmessage=function(a)
+{
+    console.log(a);
+}    
+    
+    
+    
+    
+    
+    
+    </script>
